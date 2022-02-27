@@ -35,7 +35,7 @@ function Sidebar() {
                 <p className="sidebar__statValue">##</p>
             </div>
             <div className="sidebar__stat">
-                <p>Current Modules</p>
+                <p>Registered Modules</p>
                 <p className="sidebar__statValue">##</p>
             </div>
             <div className="sidebar__stat">

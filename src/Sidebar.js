@@ -55,8 +55,15 @@ function Sidebar() {
         </div> */}
 
         <div className="sidebar__bottom">
-            <p>This is a module</p>
-            <p>This is another module</p>
+            <p>This is a test module</p>
+        </div>
+
+        <div className="sidebar__bottom">
+            <p>This is a test module</p>
+        </div>
+
+        <div className="sidebar__bottom">
+            <p>This is a test module</p>
         </div>
 
     </div>

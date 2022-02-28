@@ -8,8 +8,17 @@
     padding: 16px 8px;
     /* padding-bottom: 16px; */
     border-radius: 16px;
-    margin-bottom: 24px;
+    margin-bottom: 16px;
 }
+
+.feed__inputField {
+    display: flex;
+}
+
+/* .feed_inputAvatar {
+    width: 100%;
+    height: 100%;
+} */
 
 .feed__input {
     border: 1px solid lightgray;
@@ -18,11 +27,13 @@
     padding: 16px;
     color: gray;
     padding-left: 16px;
+    width: 100%;
 }
 
 .feed__input > form {
     display: flex;
     width: 100%;
+    overflow-wrap: anywhere;
 }
 
 .feed__input > form > input {
@@ -31,6 +42,7 @@
     margin-left: 16px;
     outline-width: 0;
     font-weight: 600;
+    /* overflow-wrap: anywhere; */
 }
 
 .feed__input > form > button {
@@ -42,5 +54,11 @@
     justify-content: space-evenly;
     /* justify-content: space-evenly; */
     color: gray;
+}
+
+.feed hr {
+    margin-bottom: 16px;
+    color: gray;
+    opacity: 0.4;
 }
 

@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { auth } from "./firebase"
 import { useDispatch } from 'react-redux';
-import './Login.css'
+import './Register.css'
 
 function Login() {
     const [name, setName] = useState("");
@@ -17,8 +17,11 @@ function Login() {
     const register = () => {
         if (!name) {
             return alert("Name required");
-        }
-        
+        } if (!email) {
+            return alert("Email required");
+        } if (!password) {
+            return alert("Password required");
+        }        
         auth
             .createUserWithEmailAndPassword(email, password)
             .then((userAuth) => {

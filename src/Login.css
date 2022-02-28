@@ -1,5 +1,5 @@
 .login {
-    background-color: #176daf;
+    background-color: #007bda;
     display: grid;
     place-items: center;
     margin-left: auto;
@@ -12,21 +12,32 @@
 .login > img {
     object-fit: contain;
     height: 96px;
-    margin-top: 24px;
-    margin-bottom: 24px;
+    /* margin-top: 24px; */
+    /* margin-bottom: 24px; */
     border: 3px solid whitesmoke;
     border-radius: 16px;
+}
+
+.login h2 {
+    color: white;
+    font-size: 48px;
+    font-weight: 600;
+}
+
+.login h4 {
+    color: whitesmoke;
 }
 
 .login > form {
     display: flex;
     flex-direction: column;
+    margin-top: 32px;
     /* justify-content: center; */
 }
 
 .login > form > input {
     width: 320px;
-    height: 40px;
+    height: 32px;
     font-size: 24px;
     padding-left: 16px;
     margin-bottom: 10px;
@@ -54,7 +65,7 @@
     margin-left: auto;
     margin-right: auto;
     font-size: large;
-    background-color: #3c88c2;
+    background-color: #2196f3;
     border: 2px solid whitesmoke;
     border-radius: 8px;
     color: whitesmoke;
@@ -62,7 +73,7 @@
 }
 
 .login > form > button:hover {
-    background-color: #0091ff;
+    background-color: #1a76c0;
     box-shadow: 0 0 10px whitesmoke;
     transition: 0.125s ease-in-out;
 }
@@ -74,5 +85,5 @@
 }
 
 .login > p:hover {
-    color: #0091ff;
+    color: #2196f3;
 }

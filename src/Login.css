@@ -1,0 +1,78 @@
+.login {
+    background-color: #176daf;
+    display: grid;
+    place-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 20vh;
+    padding-bottom: 30vh;
+    height: 50vh;
+}
+
+.login > img {
+    object-fit: contain;
+    height: 96px;
+    margin-top: 24px;
+    margin-bottom: 24px;
+    border: 3px solid whitesmoke;
+    border-radius: 16px;
+}
+
+.login > form {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+}
+
+.login > form > input {
+    width: 320px;
+    height: 40px;
+    font-size: 24px;
+    padding-left: 16px;
+    margin-bottom: 10px;
+    border-radius: 16px;
+    border: 2px solid white;
+    background-color: whitesmoke;
+    color: #075b9b;
+}
+
+.login > form > input:focus { 
+    outline: 2px #3c88c2 !important;
+    border-color: #3c88c2;
+    box-shadow: 0 0 10px whitesmoke;
+}
+/* .login > form > textarea:focus { 
+    outline: none !important;
+    border-color: #719ECE;
+    box-shadow: 0 0 10px #719ECE;
+} */
+
+.login > form > button {
+    width: 240px;
+    height: 40px;
+    margin-top: 8px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: large;
+    background-color: #3c88c2;
+    border: 2px solid whitesmoke;
+    border-radius: 8px;
+    color: whitesmoke;
+    cursor: pointer;
+}
+
+.login > form > button:hover {
+    background-color: #0091ff;
+    box-shadow: 0 0 10px whitesmoke;
+    transition: 0.125s ease-in-out;
+}
+
+.login > p {
+    margin-top: 8px;
+    color: white;
+    cursor: pointer;
+}
+
+.login > p:hover {
+    color: #0091ff;
+}

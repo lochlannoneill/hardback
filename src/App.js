@@ -8,11 +8,8 @@ import Sidebar from './Sidebar';
 function App() {
   return (
     <div className="app">
-      
-      {/* HEADER */}
       <Header />
 
-      {/* App Body */}
       <div className="app__body">
         <Sidebar />
         <Feed />

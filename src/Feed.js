@@ -20,6 +20,7 @@ function Feed() {
   return (
     <div className='feed'>
         <div className="feed__inputContainer">
+          <h3>Create an assignment</h3>
             <div className="feed__input">
                 <CreateIcon />
                 <form>
@@ -41,11 +42,30 @@ function Feed() {
         <Post />
       } */}
       <Post 
-        name='First Last'
-        description='This is a test'
-        message="WOW this worked"
+        name='Markson William'
+        description='Lecturer of CyberSecurity at MTU'
+        message="Hi guys, this is the first assignment"
       />
-
+      <Post 
+        name='Mateusz Doman'
+        description='Student of Software Development at MTU'
+        message="What was the homework for Wednesday?"
+      />
+      <Post 
+        name='First3 Last3'
+        description='This is a test for the second post'
+        message="This is my thrird post"
+      />
+      <Post 
+        name='First4 Last4'
+        description='This is a test for the second post'
+        message="This is my fourth post"
+      />
+      <Post 
+        name='First5 Last5'
+        description='This is a test for the second post'
+        message="This is my fifth post"
+      />
     </div>
   )
 }

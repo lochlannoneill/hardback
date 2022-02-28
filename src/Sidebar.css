@@ -41,6 +41,11 @@
     font-size: 12px;
 }
 
+.sidebar__top > p {
+    color: gray;
+    font-size: 14px;
+}
+
 .sidebar__course {
     border-left: 1px solid lightgray;
     border-right: 1px solid lightgray;
@@ -88,6 +93,8 @@
 }
 
 .sidebar__bottom {
+    /* position: sticky;
+    top: 80px; */
     text-align: left;
     padding: 10px;
     border: 1px solid lightgrey;

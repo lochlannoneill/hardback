@@ -18,6 +18,7 @@ function Sidebar() {
             <Avatar className="sidebar__avatar"/>
             <h2>First Last</h2>
             <h4>first.last@placeholder.com</h4>
+            <p>Title</p>
         </div>
 
         <div className="sidebar__course">
@@ -26,7 +27,7 @@ function Sidebar() {
         </div>
 
         <div className="sidebar__stats">
-        <div className="sidebar__stat">
+            <div className="sidebar__stat">
                 <p>Year</p>
                 <p className="sidebar__statValue">##</p>
             </div>
@@ -52,6 +53,11 @@ function Sidebar() {
             {recentItem('web development')}
             {recentItem('irish')}
         </div> */}
+
+        <div className="sidebar__bottom">
+            <p>This is a module</p>
+            <p>This is another module</p>
+        </div>
 
     </div>
   )

@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { auth } from "./firebase"
-import { useDispatch } from 'react-redux';
+import { useDispatch } from 'react-redux'
+import {login } from "./features/userSlice"
 import './Login.css'
 
 function Login() {
@@ -10,14 +11,14 @@ function Login() {
     // const [profilePic, setProfilepic] = useState("");
     const dispatch = useDispatch();
 
-    const login = (e) => {
+    const loginToApp = (e) => {
         e.preventDefault(); 
     };
 
     const register = () => {
-        if (!name) {
-            return alert("Name required");
-        }
+        if (!name) return alert("Name required");
+        // if (!email) return alert("Email Required");
+        // if (!password) return alert("Password required");
         
         auth
             .createUserWithEmailAndPassword(email, password)
@@ -32,12 +33,12 @@ function Login() {
                     login({
                         email: userAuth.user.email,
                         uid: userAuth.user.uid,
-                        displayName: name
+                        displayName: name //do i need this???
                         // photoUrl: profilePic
                 }))
             })
         })
-        .catch(error => alert(error.message))
+        .catch(error => alert(error))
     };
 
 
@@ -66,7 +67,7 @@ function Login() {
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     placeholder="Email"
-                    type="text">
+                    type="email">
                 </input>
 
                 <input
@@ -76,10 +77,10 @@ function Login() {
                     type="password">
                 </input>
                 
-                <button type="submite" onClick={login}>Sign In</button>
+                <button type="submit" onClick={loginToApp}>Sign In</button>
             </form>
 
-            <p className="login__register" onClick={register}>Register a new account</p>
+            <p className="login__register" onClick={register}>Register a new account here</p>
 
         </div>
     )

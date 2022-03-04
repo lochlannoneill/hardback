@@ -1,17 +1,17 @@
-.inputOption {
+.reaction {
     display: flex;
     align-items: center;
     margin: 16px 8px;
     padding: 4px;
 }
 
-.inputOption:hover {
-    background-color: whitesmoke;
+.reaction:hover {
+    background-color: var(--color-whitesmoke);
     border-radius: 8px;
-    color: #3c88c2;
+    color: var(--color-primary-bright);
     cursor: pointer;
 }
 
-.inputOption > h4 {
+.reaction > h4 {
     margin-left: 5px;
 }

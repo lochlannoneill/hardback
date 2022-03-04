@@ -1,5 +1,5 @@
 .post {
-    background-color: white;
+    background-color: var(--color-background-primary);
     padding: 16px;
     margin-bottom: 8px;
     border-radius: 8px;
@@ -16,7 +16,7 @@
 
 .post__info > p {
     font-size: 14px;
-    color: gray;
+    color: var(--color-text-dark-muted);
     font-weight: 600;
 }
 
@@ -29,6 +29,6 @@
 }
 
 .post__buttons {
-    color: gray;
+    color: var(--color-text-dark-muted);
     display: flex;
 }

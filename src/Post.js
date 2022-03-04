@@ -1,7 +1,7 @@
 import React from 'react'
 import './Post.css'
 import { Avatar } from '@mui/material'
-import InputOption from "./InputOption"
+import Reaction from "./Reaction"
 import ThumbUpOffAltIcon from '@mui/icons-material/ThumbUpOffAlt';
 import CommentIcon from '@mui/icons-material/Comment';
 import ShareIcon from '@mui/icons-material/Share';
@@ -22,9 +22,9 @@ function Post({ name, description, message, photoUrl}) {
       </div>
 
       <div className="post__buttons">
-        <InputOption Icon={ThumbUpOffAltIcon}/>
-        <InputOption Icon={CommentIcon}/>
-        <InputOption Icon={ShareIcon}/>
+        <Reaction Icon={ThumbUpOffAltIcon}/>
+        <Reaction Icon={CommentIcon}/>
+        <Reaction Icon={ShareIcon}/>
       </div>
 
 

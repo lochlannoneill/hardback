@@ -3,7 +3,7 @@
     flex-direction: column;
     align-items: center;
     margin-right: 24px;
-    color: gray;
+    color: var(--color-text-dark-muted);
     cursor: pointer;
 }
 
@@ -19,5 +19,5 @@
 }
 
 .headerOption:hover {
-    color: #3c88c2;
+    color: var(--color-primary);
 }

@@ -1,6 +1,6 @@
+import './App.css';
 import React from 'react';
 import { useSelector } from 'react-redux';
-import './App.css';
 import { selectUser } from './features/userSlice';
 import Feed from './Feed';
 import Header from './Header';
@@ -16,12 +16,14 @@ function App() {
       {!user ? (
         <Login />
       ) : (
-        <div className="app__body">
-          {/* <Header /> */}
-          <Sidebar />
-          <Feed />
-          {/* <Widgets> */}
-      </div>
+        <div className="app__head">
+          <Header />
+          <div className="app__body">
+            <Sidebar />
+            <Feed />
+            {/* <Widgets> */}
+          </div>
+        </div>
       )}
 
     </div>

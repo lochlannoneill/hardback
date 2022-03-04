@@ -1,4 +1,4 @@
-@import './constants.css';
+@import './colors.css';
 
 .login {
     background-color: var(--color-primary-darker);
@@ -14,14 +14,14 @@
 .login > img {
     object-fit: contain;
     height: 96px;
-    /* margin-top: 24px; */
-    /* margin-bottom: 24px; */
-    border: 3px solid whitesmoke;
+    /* margin-top: 16px; */
+    margin-bottom: 16px;
+    border: 3px solid var(--color-whitesmoke);
     border-radius: 16px;
 }
 
 .login h2 {
-    color: white;
+    color: var(--color-text-white);
     font-size: 48px;
     font-weight: 600;
 }
@@ -42,32 +42,28 @@
     height: 32px;
     font-size: 20px;
     padding-left: 16px;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
     border-radius: 16px;
-    border: 2px solid white;
-    background-color: whitesmoke;
-    /* color: #075b9b; */
+    border: 2px solid var(--color-white);
+    background-color: var(--color-whitesmoke);
     color: var(--color-text-dark);
 }
 
-.login > form > input:focus { 
-    /* outline: 2px #3c88c2 !important; */
-    outline: white !important;
-    /* border-color: #3c88c2; */
+.login > form > input:last-of-type {
+    margin-bottom: 24px;
+}
+
+.login > form > input:focus {
+    outline: var(--color-white) !important;
     box-shadow: 0 0 8px var(--color-whitesmoke);
 }
-/* .login > form > textarea:focus { 
-    outline: none !important;
-    border-color: #719ECE;
-    box-shadow: 0 0 10px #719ECE;
-} */
 
 .login > form > button {
     width: 240px;
     height: 40px;
-    margin-top: 8px;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 8px;
     font-size: large;
     font-weight: 600;
     background-color: var(--color-primary-dark);
@@ -85,8 +81,6 @@
 }
 
 .login > p {
-    margin-top: 8px;
-    /* color: white; */
     color: var(--color-text-muted);
     cursor: pointer;
 }

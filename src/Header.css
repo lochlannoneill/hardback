@@ -1,15 +1,17 @@
+@import './colors.css';
+
 .header {
     position: sticky;
     top: 0;
     display: flex;
     justify-content: space-evenly;
-    box-shadow: 0 0 16px 0 black;
+    box-shadow: 0 0 12px 0 var(--color-black);
     /* border-bottom: 1px solid lightgray; */
     padding: 10px 0 10px 0;
     width: 100%;
     z-index: 999;
-    background-color: white;
-    /* margin-bottom: 24px; */
+    background-color: var(--color-white);
+    margin-bottom: 16px;
 }
 
 .header__left {
@@ -29,8 +31,8 @@
     align-items: center;
     border-radius: 16px;
     height: 24px;
-    color: gray;
-    background-color: #eef3f8;
+    color: var(--color-gray);
+    background-color: var(--color-white-dark);
 }
 
 .header__search > input {

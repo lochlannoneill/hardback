@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { auth } from "./firebase"
 import { useDispatch } from 'react-redux'
-import {login } from "./features/userSlice"
+import { login } from "./features/userSlice"
 import './Login.css'
 
 function Login() {
@@ -37,7 +37,7 @@ function Login() {
                 }))
             })
         })
-        .catch(error => alert(error))
+        .catch((error) => alert(error))
     };
 
 
@@ -51,7 +51,7 @@ function Login() {
                 <input
                     value={name}
                     onChange={(e) => setName(e.target.value)}
-                    placeholder="Full Name"
+                    placeholder="Full Name (register only)"
                     type="text">
                 </input>
 

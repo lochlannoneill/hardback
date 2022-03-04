@@ -23,10 +23,9 @@ function Login() {
         auth
             .createUserWithEmailAndPassword(email, password)
             .then((userAuth) => {
-                userAuth.user
-                    .updateProfile({
-                        displayName: name,
-                        // photoURL: profilePic,
+                userAuth.user.updateProfile({
+                    displayName: name,
+                    // photoURL: profilePic,
             })
             .then(() => {
                 dispatch(
@@ -80,7 +79,7 @@ function Login() {
                 <button type="submit" onClick={loginToApp}>Sign In</button>
             </form>
 
-            <p className="login__register" onClick={register}>Register a new account here</p>
+            <p className="login__register" onClick={register}>Register a new account</p>
 
         </div>
     )

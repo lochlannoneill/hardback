@@ -1,5 +1,7 @@
+@import './constants.css';
+
 .login {
-    background-color: #02518d;
+    background-color: var(--color-primary-darker);
     display: grid;
     place-items: center;
     margin-left: auto;
@@ -25,7 +27,7 @@
 }
 
 .login h4 {
-    color: whitesmoke;
+    color: var(--color-text-muted);
 }
 
 .login > form {
@@ -45,14 +47,14 @@
     border: 2px solid white;
     background-color: whitesmoke;
     /* color: #075b9b; */
-    color: black;
+    color: var(--color-text-dark);
 }
 
 .login > form > input:focus { 
     /* outline: 2px #3c88c2 !important; */
     outline: white !important;
     /* border-color: #3c88c2; */
-    box-shadow: 0 0 10px whitesmoke;
+    box-shadow: 0 0 8px var(--color-whitesmoke);
 }
 /* .login > form > textarea:focus { 
     outline: none !important;
@@ -68,26 +70,28 @@
     margin-right: auto;
     font-size: large;
     font-weight: 600;
-    background-color: #2196f3;
-    border: 2px solid whitesmoke;
+    background-color: var(--color-primary-dark);
+    border: 2px solid var(--color-whitesmoke);
     border-radius: 8px;
-    color: whitesmoke;
+    color: var(--color-text-white);
     cursor: pointer;
 }
 
 .login > form > button:hover {
-    background-color: #0077ff;
-    color: white;
-    box-shadow: 0 0 10px whitesmoke;
+    background-color: var(--color-primary-bright);
+    color: var(--color-text-whiter);
+    box-shadow: 0 0 8px var(--color-whitesmoke);
     transition: 0.25 ease-in-out;
 }
 
 .login > p {
     margin-top: 8px;
-    color: white;
+    /* color: white; */
+    color: var(--color-text-muted);
     cursor: pointer;
 }
 
 .login > p:hover {
-    color: #2196f3;
+    text-decoration: underline;
+    color: var(--color-text-whiter);
 }

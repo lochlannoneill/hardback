@@ -12,7 +12,20 @@ function Login() {
     const dispatch = useDispatch();
 
     const loginToApp = (e) => {
-        e.preventDefault(); 
+        e.preventDefault();
+
+        auth
+            .signInWithEmailAndPassword(email, password)
+            .then((userAuth) => {
+                dispatch(
+                    login({
+                        uid: userAuth.user.uid,
+                        email: userAuth.user.email,
+                        displayName: userAuth.user.displayName,
+                    })
+                )                 
+            })
+
     };
 
     const register = () => {
@@ -76,7 +89,7 @@ function Login() {
                     type="password">
                 </input>
                 
-                <button type="submit" onClick={loginToApp}>Sign In</button>
+                <button type="submit" onClick={loginToApp}>Log In</button>
             </form>
 
             <p className="login__register" onClick={register}>Register a new account</p>

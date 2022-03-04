@@ -13,10 +13,11 @@ function App() {
   const user = useSelector(selectUser)
   const dispatch = useDispatch()
 
+  // persistent login - keep the user logged in on refresh
+  // IDEA - stay logged in checkbox
   useEffect(() => {
     auth.onAuthStateChanged(userAuth => {
       if (userAuth) {
-        //user is logged in
         dispatch(
           login({
             uid: userAuth.uid,
@@ -25,7 +26,6 @@ function App() {
           })
         )
       } else {
-        //user is logged out
          dispatch(logout());
       }
     })

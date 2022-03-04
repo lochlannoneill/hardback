@@ -27,7 +27,7 @@
 }
 
 .login h4 {
-    color: var(--color-text-muted);
+    color: var(--color-text-white-muted);
 }
 
 .login > form {
@@ -81,7 +81,7 @@
 }
 
 .login > p {
-    color: var(--color-text-muted);
+    color: var(--color-text-white-muted);
     cursor: pointer;
 }
 

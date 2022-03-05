@@ -10,13 +10,13 @@ import { auth } from './firebase';
 
 
 function App() {
-  const user = useSelector(selectUser)
-  const dispatch = useDispatch()
+  const user = useSelector(selectUser);
+  const dispatch = useDispatch();
 
   // persistent login - keep the user logged in on refresh
   // IDEA - stay logged in checkbox
   useEffect(() => {
-    auth.onAuthStateChanged(userAuth => {
+    auth.onAuthStateChanged((userAuth) => {
       if (userAuth) {
         dispatch(
           login({
@@ -24,12 +24,12 @@ function App() {
             email: userAuth.email,
             displayName: userAuth.displayName,
           })
-        )
+        );
       } else {
          dispatch(logout());
       }
-    })
-  })
+    });
+  }, []);
 
   return (
     <div className="app">

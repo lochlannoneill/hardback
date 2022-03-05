@@ -40,11 +40,12 @@ function Header() {
 
         <div className="header__right">
           <HeaderOption Icon={HomeIcon} title='Home' />
-          <HeaderOption Icon={MenuBookIcon} title='Modules' />
+          {/* <HeaderOption Icon={MenuBookIcon} title='Modules' /> */}
+          <HeaderOption Icon={MenuBookIcon} title='Notes' />
           <HeaderOption Icon={CalendarTodayIcon} title='Calendar' />
-          <HeaderOption Icon={GroupsIcon} title='Teams' />
+          {/* <HeaderOption Icon={GroupsIcon} title='Teams' /> */}
           <HeaderOption Icon={ChatIcon} title='Messages' />
-          <HeaderOption Icon={NotificationsIcon} title='Notifications' />
+          {/* <HeaderOption Icon={NotificationsIcon} title='Notifications' /> */}
           <HeaderOption
             avatar={true}
             title={user.firstname}

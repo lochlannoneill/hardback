@@ -6,6 +6,8 @@ import './Login.css'
 
 function Login() {
     const [name, setName] = useState("");
+    const [fname, setFname] = useState("");
+    const [sname, setSname] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     // const [profilePic, setProfilepic] = useState("");
@@ -21,7 +23,7 @@ function Login() {
                     login({
                         uid: userAuth.user.uid,
                         email: userAuth.user.email,
-                        displayName: userAuth.user.displayName,
+                        firstname: userAuth.user.firstname,
                     })
                 )                 
             })
@@ -29,7 +31,8 @@ function Login() {
     };
 
     const register = () => {
-        if (!name) return alert("Name required");
+        if (!fname) return alert("First name required");
+        if (!sname) return alert("Surname required");
         // if (!email) return alert("Email Required");
         // if (!password) return alert("Password required");
         
@@ -37,7 +40,8 @@ function Login() {
             .createUserWithEmailAndPassword(email, password)
             .then((userAuth) => {
                 userAuth.user.updateProfile({
-                    displayName: name,
+                    firstname: fname,
+                    surname: sname,
                     // photoURL: profilePic,
             })
             .then(() => {
@@ -45,7 +49,8 @@ function Login() {
                     login({
                         email: userAuth.user.email,
                         uid: userAuth.user.uid,
-                        displayName: name //do i need this???
+                        firstname: fname,
+                        surname: sname
                         // photoUrl: profilePic
                 }))
             })
@@ -62,9 +67,16 @@ function Login() {
 
             <form>
                 <input
-                    value={name}
-                    onChange={(e) => setName(e.target.value)}
-                    placeholder="Full Name (register only)"
+                    value={fname}
+                    onChange={(e) => setFname(e.target.value)}
+                    placeholder="First Name (register only)"
+                    type="text">
+                </input>
+
+                <input
+                    value={sname}
+                    onChange={(e) => setSname(e.target.value)}
+                    placeholder="Surname (register only)"
                     type="text">
                 </input>
 

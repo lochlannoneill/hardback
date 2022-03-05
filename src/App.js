@@ -22,7 +22,8 @@ function App() {
           login({
             uid: userAuth.uid,
             email: userAuth.email,
-            displayName: userAuth.displayName,
+            fname: userAuth.fname,
+            sname: userAuth.sname,
           })
         );
       } else {

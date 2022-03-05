@@ -6,7 +6,7 @@ import ThumbUpOffAltIcon from '@mui/icons-material/ThumbUpOffAlt';
 import CommentIcon from '@mui/icons-material/Comment';
 import ShareIcon from '@mui/icons-material/Share';
 
-function Post({ name, description, message, photoUrl}) {
+function Post({ name, description, message, picture}) {
   return (
     <div className="post">
       <div className="post__header">

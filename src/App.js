@@ -24,6 +24,7 @@ function App() {
             email: userAuth.email,
             fname: userAuth.fname,
             sname: userAuth.sname,
+            pic: userAuth.pic,
           })
         );
       } else {

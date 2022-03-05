@@ -36,7 +36,7 @@ function Feed() {
       name: 'Lochlann O Neill',
       description: 'Admin at Hardback',
       message: input,
-      photoUrl: '',
+      picture: '',
       timestamp: firebase.firestore.FieldValue.serverTimestamp()
     })
 

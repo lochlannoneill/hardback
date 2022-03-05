@@ -5,30 +5,13 @@ import { login } from "./features/userSlice"
 import './Login.css'
 
 function Login() {
-    const [name, setName] = useState("");
     const [fname, setFname] = useState("");
     const [sname, setSname] = useState("");
+    const [pic, setPic] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     // const [profilePic, setProfilepic] = useState("");
     const dispatch = useDispatch();
-
-    const loginToApp = (e) => {
-        e.preventDefault();
-
-        auth
-            .signInWithEmailAndPassword(email, password)
-            .then((userAuth) => {
-                dispatch(
-                    login({
-                        uid: userAuth.user.uid,
-                        email: userAuth.user.email,
-                        firstname: userAuth.user.firstname,
-                    })
-                )                 
-            })
-
-    };
 
     const register = () => {
         if (!fname) return alert("First name required");
@@ -42,7 +25,7 @@ function Login() {
                 userAuth.user.updateProfile({
                     firstname: fname,
                     surname: sname,
-                    // photoURL: profilePic,
+                    picture: pic,
             })
             .then(() => {
                 dispatch(
@@ -50,12 +33,31 @@ function Login() {
                         email: userAuth.user.email,
                         uid: userAuth.user.uid,
                         firstname: fname,
-                        surname: sname
-                        // photoUrl: profilePic
+                        surname: sname,
+                        picture: pic
                 }))
             })
         })
         .catch((error) => alert(error))
+    };
+
+    const loginToApp = (e) => {
+        e.preventDefault();
+
+        auth
+            .signInWithEmailAndPassword(email, password)
+            .then((userAuth) => {
+                dispatch(
+                    login({
+                        uid: userAuth.user.uid,
+                        email: userAuth.user.email,
+                        firstname: userAuth.user.firstname,
+                        lastname: userAuth.user.lastname,
+                        picture: userAuth.user.picture,
+                    })
+                )                 
+            })
+
     };
 
 
@@ -86,6 +88,13 @@ function Login() {
                     placeholder="Profile Picture Url (optional)"
                     type="text">
                 </input> */}
+                
+                <input
+                    value={pic}
+                    onChange={(e) => setPic(e.target.value)}
+                    placeholder="Picture URL (optional)"
+                    type="text">
+                </input>
 
                 <input
                     value={email}

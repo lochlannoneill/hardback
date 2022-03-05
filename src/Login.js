@@ -56,7 +56,7 @@ function Login() {
 
     return (
         <div className="login">
-            <img src="https://cdn-icons.flaticon.com/png/512/3097/premium/3097042.png?token=exp=1646052770~hmac=02f54b7f096571bb47be11c1a990f744" alt="" />
+            <img src="https://i.imgur.com/uDiroex.png" alt="" />
             <h2>Hardback</h2>
             <h4>A social media platform for education.</h4>
 

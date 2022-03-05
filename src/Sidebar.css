@@ -7,8 +7,8 @@
     border-radius: 8px;
     text-align: center;
     height: fit-content;
-    min-width: 160px;
-    max-width: 200px;
+    min-width: 200px;
+    /* max-width: 200px; */
 }
 
 .sidebar__avatar {
@@ -38,16 +38,20 @@
 .sidebar__top > h2 {
     color: var(--color-primary-bright);
     font-size: 16px;
+    font-weight: 600;
 }
 
 .sidebar__top > h4 {
     color: var(--color-text-dark-muted);
-    font-size: 12px;
+    font-size: 14px;
+    font-weight: 600;
 }
 
 .sidebar__top > p {
     color: var(--color-text-dark-muted);
     font-size: 14px;
+    font-weight: 400;
+
 }
 
 .sidebar__course {
@@ -62,6 +66,7 @@
 .sidebar__course > p {
     color: var(--color-text-dark-muted);
     font-size: 12px;
+    font-weight: 400;
 }
 
 .sidebar__course > p:first-child {

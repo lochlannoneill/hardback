@@ -6,8 +6,8 @@
     place-items: center;
     margin-left: auto;
     margin-right: auto;
-    padding-top: 20vh;
-    padding-bottom: 30vh;
+    padding-top: 16vh;
+    padding-bottom: 34vh;
     height: 50vh;
 }
 
@@ -49,6 +49,11 @@
     color: var(--color-text-dark);
 }
 
+.login > form > .input__register {
+    background-color: var(--color-lightgray)!important;
+    border: var(--color-lightgray)!important;
+}
+
 .login > form > input:last-of-type {
     margin-bottom: 24px;
 }
@@ -58,12 +63,12 @@
     box-shadow: 0 0 8px var(--color-whitesmoke);
 }
 
-.login > form > button {
+.login button {
     width: 240px;
-    height: 40px;
+    height: 48px;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 8px;
+    margin-bottom: 12px;
     font-size: large;
     font-weight: 600;
     background-color: var(--color-primary-dark);

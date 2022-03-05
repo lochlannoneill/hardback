@@ -20,7 +20,7 @@ function Header() {
   const logoutOfApp = () => {
     dispatch(logout())
     auth.signOut()
-  }
+  };
 
   return (
     <div className='header'>

@@ -17,6 +17,12 @@
 
 .feed__inputField {
     display: flex;
+    margin-right: 8px;
+}
+
+.feed_inputAvatar {
+    height: 64px!important;
+    width: 64px!important;
 }
 
 /* .feed_inputAvatar {
@@ -25,12 +31,13 @@
 } */
 
 .feed__input {
-    border: 1px solid var(--color-lightgray);
-    border-radius: 32px;
+    /* border: 1px solid var(--color-lightgray);
+    border-radius: 32px; */
+    border-bottom: 1px solid var(--color-lightgray);
     display: flex;
-    padding: 16px;
+    /* padding: 16px; */
     color: var(--color-text-dark-muted);
-    padding-left: 16px;
+    padding-left: 0px;
     width: 100%;
 }
 
@@ -43,9 +50,13 @@
 .feed__input > form > input {
     border: none;
     flex: 1;
-    margin-left: 16px;
+    margin-left: 8px;
+    margin-right: 8px;
     outline-width: 0;
     font-weight: 600;
+    overflow: visible;
+    font-size: 16px;
+    padding: 6px 0 2px 8px;
     /* overflow-wrap: anywhere; */
 }
 

@@ -7,4 +7,6 @@
 
 .app__body {
     display: flex;
+    margin-left: 8vh;
+    margin-right: 8vh;
 }

@@ -3,6 +3,8 @@
 .feed {
     flex: 0.6;
     margin: 0 24px;
+    min-width: 400px;
+    max-width: 560px;
 }
 
 .feed__inputContainer {

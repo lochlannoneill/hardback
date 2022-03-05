@@ -22,9 +22,9 @@ function App() {
           login({
             uid: userAuth.uid,
             email: userAuth.email,
-            fname: userAuth.fname,
-            sname: userAuth.sname,
-            pic: userAuth.pic,
+            firstname: userAuth.firstname,
+            surname: userAuth.surname,
+            picture: userAuth.picture,
           })
         );
       } else {

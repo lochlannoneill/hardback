@@ -5,8 +5,8 @@ import { login } from "./features/userSlice"
 import './Login.css'
 
 function Login() {
-    const [fname, setFname] = useState("");
-    const [sname, setSname] = useState("");
+    const [firstname, setFname] = useState("");
+    const [surname, setSname] = useState("");
     const [pic, setPic] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
@@ -14,8 +14,8 @@ function Login() {
     const dispatch = useDispatch();
 
     const register = () => {
-        if (!fname) return alert("First name required");
-        if (!sname) return alert("Surname required");
+        if (!firstname) return alert("First name required");
+        if (!surname) return alert("Surname required");
         // if (!email) return alert("Email Required");
         // if (!password) return alert("Password required");
         
@@ -23,8 +23,8 @@ function Login() {
             .createUserWithEmailAndPassword(email, password)
             .then((userAuth) => {
                 userAuth.user.updateProfile({
-                    firstname: fname,
-                    surname: sname,
+                    firstname: firstname,
+                    surname: surname,
                     picture: pic,
             })
             .then(() => {
@@ -32,8 +32,8 @@ function Login() {
                     login({
                         email: userAuth.user.email,
                         uid: userAuth.user.uid,
-                        firstname: fname,
-                        surname: sname,
+                        firstname: firstname,
+                        surname: surname,
                         picture: pic
                 }))
             })
@@ -69,16 +69,16 @@ function Login() {
 
             <form>
                 <input
-                    value={fname}
+                    value={firstname}
                     onChange={(e) => setFname(e.target.value)}
-                    placeholder="First Name (register only)"
+                    placeholder="First Name (register required)"
                     type="text">
                 </input>
 
                 <input
-                    value={sname}
+                    value={surname}
                     onChange={(e) => setSname(e.target.value)}
-                    placeholder="Surname (register only)"
+                    placeholder="Surname (register required)"
                     type="text">
                 </input>
 
@@ -92,7 +92,7 @@ function Login() {
                 <input
                     value={pic}
                     onChange={(e) => setPic(e.target.value)}
-                    placeholder="Picture URL (optional)"
+                    placeholder="Picture URL (register optional)"
                     type="text">
                 </input>
 

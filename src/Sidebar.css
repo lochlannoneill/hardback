@@ -7,6 +7,8 @@
     border-radius: 8px;
     text-align: center;
     height: fit-content;
+    min-width: 160px;
+    max-width: 200px;
 }
 
 .sidebar__avatar {

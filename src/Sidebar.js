@@ -18,7 +18,7 @@ function Sidebar() {
   return (
     <div className="sidebar">
         <div className="sidebar__top">
-            <img src="https://www.amnesty.ie/wp-content/uploads/2016/05/placeholder_2.jpg" alt=""/>
+            <img src="https://media-exp1.licdn.com/dms/image/C5616AQF7CztYFtukXA/profile-displaybackgroundimage-shrink_350_1400/0/1642917689731?e=1651708800&v=beta&t=-YfvffL-WNnjSnrYpVm-o3SPWBG-2lwo90lVeCtLPwY" alt=""/>
             
             {/* NEEDS UPDATE - allow user to upload profile picture */}
             {/* <Avatar src={user.profilePicture}className="sidebar__avatar">
@@ -31,7 +31,7 @@ function Sidebar() {
             <h2>{user.firstname} {user.surname}</h2>
             <h4>{user.email}</h4>
             {/* NEEDS UPDATE - title */}
-            <p>Title</p> 
+            <p>This is a placeholder</p> 
         </div>
 
         <div className="sidebar__course">
@@ -68,15 +68,15 @@ function Sidebar() {
         </div> */}
 
         <div className="sidebar__bottom">
-            <p>This is a test module</p>
+            <p>This is a test notebook sidebar</p>
         </div>
 
         <div className="sidebar__bottom">
-            <p>This is a test module</p>
+            <p>This is a test notebook sidebar</p>
         </div>
 
         <div className="sidebar__bottom">
-            <p>This is a test module</p>
+            <p>This is a test notebook sidebar</p>
         </div>
 
     </div>

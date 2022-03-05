@@ -1,8 +1,12 @@
 import { Avatar } from '@mui/material';
 import React from 'react';
+import { useSelector } from 'react-redux';
+import { selectUser } from './features/userSlice';
 import "./Sidebar.css";
 
 function Sidebar() {
+
+    const user = useSelector(selectUser);
 
     // const  = {topic} => (
     //     <div className="sidebar__recentItem">
@@ -15,10 +19,19 @@ function Sidebar() {
     <div className="sidebar">
         <div className="sidebar__top">
             <img src="https://www.amnesty.ie/wp-content/uploads/2016/05/placeholder_2.jpg" alt=""/>
-            <Avatar className="sidebar__avatar"/>
-            <h2>First Last</h2>
-            <h4>first.last@placeholder.com</h4>
-            <p>Title</p>
+            
+            {/* NEEDS UPDATE - allow user to upload profile picture */}
+            {/* <Avatar src={user.profilePicture}className="sidebar__avatar">
+                {user.firstname[0]}
+            </Avatar> */}
+
+            <Avatar className="sidebar__avatar">
+                {user.firstname[0]}
+            </Avatar>
+            <h2>{user.firstname} {user.surname}</h2>
+            <h4>{user.email}</h4>
+            {/* NEEDS UPDATE - title */}
+            <p>Title</p> 
         </div>
 
         <div className="sidebar__course">

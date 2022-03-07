@@ -6,13 +6,13 @@ import ThumbUpOffAltIcon from '@mui/icons-material/ThumbUpOffAlt';
 import CommentIcon from '@mui/icons-material/Comment';
 import ShareIcon from '@mui/icons-material/Share';
 
-function Post({ name, description, message, picture}) {
+function Post({ firstname, surname, description, message, picture}) {
   return (
     <div className="post">
       <div className="post__header">
-        <Avatar />
+        <Avatar src={picture}>{firstname[0]}</Avatar>
           <div className="post__info">
-            <h2>{name}</h2>
+            <h2>{firstname} {surname}</h2>
             <p>{description}</p>
           </div>
       </div>

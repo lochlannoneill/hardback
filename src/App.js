@@ -16,23 +16,23 @@ function App() {
   // persistent login - keep the user logged in when page refresh
   // IDEA - 'stay logged in' checkbox in the login page
   // FIX - fname, sname and picture not updating on state change
-  // useEffect(() => {
-  //   auth.onAuthStateChanged((userAuth) => {
-  //     if (userAuth) {
-  //       dispatch(
-  //         login({
-  //           uid: userAuth.uid,
-  //           email: userAuth.email,
-  //           firstname: userAuth.firstname,
-  //           surname: userAuth.surname,
-  //           picture: userAuth.picture,
-  //         })
-  //       );
-  //     } else {
-  //        dispatch(logout());
-  //     }
-  //   });
-  // }, []);
+  useEffect(() => {
+    auth.onAuthStateChanged((userAuth) => {
+      if (userAuth) {
+        dispatch(
+          login({
+            uid: userAuth.uid,
+            email: userAuth.email,
+            firstname: userAuth.firstname,
+            surname: userAuth.surname,
+            picture: userAuth.picture,
+          })
+        );
+      } else {
+         dispatch(logout());
+      }
+    });
+  }, []);
 
   return (
     <div className="app">

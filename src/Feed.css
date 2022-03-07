@@ -13,6 +13,7 @@
     /* padding-bottom: 16px; */
     border-radius: 16px;
     margin-bottom: 16px;
+    border: 1px solid var(--color-lightgray);
 }
 
 .feed__inputField {
@@ -21,8 +22,9 @@
 }
 
 .feed_inputAvatar {
-    height: 64px!important;
-    width: 64px!important;
+    height: 56px!important;
+    width: 56px!important;
+    cursor: pointer;
 }
 
 /* .feed_inputAvatar {
@@ -44,20 +46,39 @@
 .feed__input > form {
     display: flex;
     width: 100%;
-    overflow-wrap: anywhere;
+    /* overflow-wrap: anywhere; */
 }
 
-.feed__input > form > input {
-    border: none;
+.feed__input > form > textarea {
+    /* border: none;
     flex: 1;
     margin-left: 8px;
     margin-right: 8px;
     outline-width: 0;
     font-weight: 600;
+    color: var(--color-text-dark);
     overflow: visible;
     font-size: 16px;
-    padding: 6px 0 2px 8px;
-    /* overflow-wrap: anywhere; */
+    padding: 16px 8px 0 8px;
+    overflow-wrap: anywhere; */
+    border: none;
+    outline: none;
+    resize: none;
+    overflow: hidden;
+    margin-left: 4px;
+    margin-right: 4px;
+    font-weight: 600;
+    font-size: 16px;
+    padding: 16px 8px 0 8px;
+    line-height: 1.4;
+    min-width: 128px;
+    /* max-height: 100px; */
+    /* max-width: 430px; */
+    min-height: 50px;
+    max-height: 100px;
+    width: 100%;
+    color: var(--color-text-dark);
+    /* background-color: transpartent; */
 }
 
 .feed__input > form > button {

@@ -1,5 +1,3 @@
-@import 'colors.css';
-
 .post {
     background-color: var(--color-background-primary);
     padding: 16px;
@@ -16,6 +14,19 @@
     margin-left: 8px;
 }
 
+.post_Avatar {
+    cursor: pointer;
+}
+
+.post_Avatar:hover {
+    opacity: 0.867;
+    transition: 0.2s ease-in-out;
+}
+
+.post__info > h2 {
+    font-size: 16px;
+}
+
 .post__info > p {
     font-size: 14px;
     color: var(--color-text-dark-muted);
@@ -24,10 +35,6 @@
 
 .post__body {
     overflow-wrap: anywhere;
-}
-
-.post__info > h2 {
-    font-size: 16px;
 }
 
 .post__buttons {

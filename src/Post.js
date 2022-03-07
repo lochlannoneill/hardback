@@ -10,7 +10,10 @@ function Post({ firstname, surname, description, message, picture}) {
   return (
     <div className="post">
       <div className="post__header">
-        <Avatar src={picture}>{firstname[0]}</Avatar>
+        <Avatar 
+          className="post_Avatar"
+          src={picture}>{firstname[0]}
+        </Avatar>
           <div className="post__info">
             <h2>{firstname} {surname}</h2>
             <p>{description}</p>

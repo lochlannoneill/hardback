@@ -1,5 +1,3 @@
-@import './colors.css';
-
 .header {
     position: sticky;
     top: 0;
@@ -34,6 +32,11 @@
     color: var(--color-gray);
     background-color: var(--color-white-dark);
 }
+
+/* FIX - this only changes the background color on mouse HOLD instead of toggle */
+/* .header__search:active {
+    background-color: var(--color-whitesmoke);
+} */
 
 .header__search > input {
     outline: none;

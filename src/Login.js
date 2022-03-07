@@ -1,13 +1,13 @@
-import React, { useState } from 'react'
-import { auth } from "./firebase"
-import { useDispatch } from 'react-redux'
-import { login } from "./features/userSlice"
-import './Login.css'
+import React, { useState } from 'react';
+import { auth } from "./firebase";
+import { useDispatch } from 'react-redux';
+import { login } from "./features/userSlice";
+import './Login.css';
 
 function Login() {
     const [firstname, setFname] = useState("");
     const [surname, setSname] = useState("");
-    const [pic, setPic] = useState("");
+    const [picture, setPic] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     // const [profilePic, setProfilepic] = useState("");
@@ -23,25 +23,29 @@ function Login() {
             .createUserWithEmailAndPassword(email, password)
             .then((userAuth) => {
                 userAuth.user.updateProfile({
-                    firstname: firstname,
-                    surname: surname,
-                    picture: pic,
+                    firstname: userAuth.user.firstname,
+                    surname: userAuth.user.surname,
+                    picture: picture,
             })
             .then(() => {
                 dispatch(
+                    // FIX - ONLY EMAIL AND UID DISPATCHED. FIRSTNAME AND SURNAME CAUSING WHITESCREEN SINCE THEY CANT BE READ IN OTHER PARTS OF THE CODE
                     login({
                         email: userAuth.user.email,
                         uid: userAuth.user.uid,
                         firstname: firstname,
                         surname: surname,
-                        picture: pic
-                }))
-            })
+                        picture: picture,
+                    })
+                );
+            });
         })
-        .catch((error) => alert(error))
+        .catch((error) => alert(error));
     };
 
     const loginToApp = (e) => {
+        if (!email) return alert("Email required");
+        if (!password) return alert("Password required");
         e.preventDefault();
 
         auth
@@ -52,12 +56,11 @@ function Login() {
                         uid: userAuth.user.uid,
                         email: userAuth.user.email,
                         firstname: userAuth.user.firstname,
-                        lastname: userAuth.user.lastname,
+                        surname: userAuth.user.surname,
                         picture: userAuth.user.picture,
                     })
-                )                 
-            })
-
+                );               
+            });
     };
 
 
@@ -69,6 +72,7 @@ function Login() {
 
             <form>
                 <input
+                    className="input__register"
                     value={firstname}
                     onChange={(e) => setFname(e.target.value)}
                     placeholder="First Name (register required)"
@@ -76,6 +80,7 @@ function Login() {
                 </input>
 
                 <input
+                    className="input__register"
                     value={surname}
                     onChange={(e) => setSname(e.target.value)}
                     placeholder="Surname (register required)"
@@ -90,7 +95,8 @@ function Login() {
                 </input> */}
                 
                 <input
-                    value={pic}
+                    className="input__register"
+                    value={picture}
                     onChange={(e) => setPic(e.target.value)}
                     placeholder="Picture URL (register optional)"
                     type="text">
@@ -113,7 +119,9 @@ function Login() {
                 <button type="submit" onClick={loginToApp}>Log In</button>
             </form>
 
-            <p className="login__register" onClick={register}>Register a new account</p>
+            <button type="submit" onClick={register}>Register</button>
+
+            {/* <p className="login__register" onClick={register}>Register a new account</p> */}
 
         </div>
     )

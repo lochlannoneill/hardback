@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import './Feed.css'
+import { useSelector } from 'react-redux';
 import CreateIcon from '@mui/icons-material/Create';
 import Reaction from './Reaction';
 import ImageIcon from '@mui/icons-material/Image';
@@ -11,8 +12,11 @@ import { db } from "./firebase"
 import firebase from "firebase/compat/app"
 import 'firebase/compat/firestore';
 import { Avatar } from '@mui/material';
+import { selectUser } from './features/userSlice';
 
 function Feed() {
+  const user = useSelector(selectUser);
+
   const [input, setInput] = useState('');
   const [posts, setPosts] = useState([]);
 
@@ -33,26 +37,49 @@ function Feed() {
     e.preventDefault();
 
     db.collection('posts').add({
-      name: 'Lochlann O Neill',
-      description: 'Admin at Hardback',
+      firstname: user.firstname,
+      surname: user.surname,
+      description: user.email,
       message: input,
-      picture: '',
+      picture: user.picture,
       timestamp: firebase.firestore.FieldValue.serverTimestamp()
     })
 
     setInput("");
   };
 
+  // function auto_grow(element) {
+  //   element.style.height = "5px";
+  //   element.style.height = (element.scrollHeight)+"px";
+  // }
+
   return (
     <div className='feed'>
         <div className="feed__inputContainer">
           <div className="feed__inputField">
-            <Avatar className="feed_inputAvatar"/>
+            <Avatar className="feed_avatar" src={user.picture}>
+              {user.firstname[0]}
+            </Avatar>
+            
             <div className="feed__input">
-                <CreateIcon />
+                {/* <CreateIcon /> */}
                 <form>
-                  <input value={input} onChange={e => setInput(e.target.value)} type="text" />
-                  <button onClick={sendPost} type="submit">Post</button>
+                  <textarea
+                    value={input}
+                    // oninput={auto_grow}
+                    // contenteditable="true"
+                    // onkeyup="textAreaAdjust(this)"
+                    onChange={e => setInput(e.target.value)}
+                    type="text"
+                    placeholder="What's on your mind?">
+                    {/* aria-autocomplete="list"
+                    aria-controls="typeaheadDropdownWrapped-1" */}
+                  </textarea>
+                  <button
+                    onClick={sendPost}
+                    type="submit">
+                      Post
+                  </button>
                 </form>
             </div>
           </div>
@@ -67,13 +94,14 @@ function Feed() {
       <hr></hr>
 
       {/* Posts */}
-      {posts.map(({id, data: {name, description, message, photoUrl } }) => (
+      {posts.map(({id, data: {firstname, surname, description, message, picture } }) => (
         <Post 
           key={id}
-          name={name}
+          firstname={firstname}
+          surname={surname}
           description={description}
           message={message}
-          photoUrl={photoUrl}
+          picture={picture}
         />
       ))}
       

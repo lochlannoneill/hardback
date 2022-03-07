@@ -78,7 +78,7 @@
     cursor: pointer;
 }
 
-.login > form > button:hover {
+.login button:hover {
     background-color: var(--color-primary-bright);
     color: var(--color-text-whiter);
     box-shadow: 0 0 8px var(--color-whitesmoke);

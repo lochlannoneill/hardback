@@ -13,7 +13,7 @@ function HeaderOption({ avatar, Icon, title, onClick }) {
         {Icon && <Icon className='headerOption__icon' />}
         {/* {avatar && <Avatar className='headerOption__icon' src={avatar} />} */}
         {avatar && (
-          <Avatar src={user.picture} className='headerOption__icon'>
+          <Avatar className='headerOption__icon' src={user.picture}>
             {/* NEEDS UPDATE - shoud be defaulted to a letter if there is no other option */}
             {/* {user.firstname[0]} */}
           </Avatar>

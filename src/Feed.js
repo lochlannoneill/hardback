@@ -58,7 +58,7 @@ function Feed() {
         <div className="feed__inputContainer">
           <div className="feed__inputField">
             <Avatar className="feed_avatar" src={user.picture}>
-              {user.firstname[0]}
+              {/* {user.firstname[0]} */}
             </Avatar>
             
             <div className="feed__input">

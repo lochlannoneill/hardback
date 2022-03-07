@@ -25,7 +25,10 @@ function Sidebar() {
                 {user.firstname[0]}
             </Avatar> */}
 
-            <Avatar src={user.picture} className="sidebar__avatar">
+            <Avatar 
+            className="sidebar__avatar"
+            src={user.picture}
+            >
                 {/* {user.firstname[0]} */}
             </Avatar>
             <h2>{user.firstname} {user.surname}</h2>
